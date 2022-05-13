@@ -80,12 +80,14 @@ label[for='navicon'] span { // hide alt text
 .Docs__nav {
   flex: 2;
   margin-top: 0.4em;
+  max-width: 230px;
   padding-right: 20px;
   position: relative;
 
   @media (max-width: $Docs__bp_stacked) {
     display: none; // hides menu into navicon on small screens
     margin: 0 -20px 40px -20px;
+    max-width: none;
     padding-right: 0;
   }
 }
@@ -406,7 +408,7 @@ label[for='navicon'] span { // hide alt text
 @media (min-width: 1201px) { //TOC as side column on larger screens
   .Docs__article {
     display: grid;
-    grid-template-columns: 1fr 250px;
+    grid-template-columns: minmax(10px, 1fr) 250px;
     position: relative;
   }
 
@@ -419,6 +421,9 @@ label[for='navicon'] span { // hide alt text
     top: 0;
 
     .Docs__toc__sticky {
+      background: #fefefe;
+      box-shadow: 2px 2px 4px 5px #eee;
+      padding: 1px 5px 8px 15px;
       position: sticky;
       top: 3rem;
       width: 220px;
@@ -669,7 +674,7 @@ body.beta {
     .Docs__heading {
       display: inline;
       position: relative;
-  
+
       &:after {
         @include beta-pill;
       }

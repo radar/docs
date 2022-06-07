@@ -373,7 +373,7 @@ label[for='navicon'] span { // hide alt text
   @extend .TextContent;
   hr { margin: 2.5em 0; }
   hr + h2 { margin-top: 0; }
-  th { font-weight: normal; }
+  th { font-weight:600; }
   thead th { font-weight: 600; }
   .image, img { max-width: 100%; }
   .responsive-image-container { margin: .5rem 0 2rem 0; }
